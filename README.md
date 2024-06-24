@@ -34,7 +34,7 @@ This project provides a Spring Boot application that performs speech recognition
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/speech-recognition-spring-boot.git
+    git clone https://github.com/padmaja125/speech-recognition-spring-boot.git
     cd speech-recognition-spring-boot
     ```
 
