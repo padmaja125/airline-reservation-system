@@ -19,3 +19,33 @@ The Airline Reservation System is a full-stack application designed to manage fl
 - **Back-End**: Java, Spring Boot, Spring MVC, Spring Data JPA
 - **Front-End**: Vue.js, Axios (for API calls)
 - **Database**: H2 (for development), other databases for production ( MySQL)
+
+Project Structure
+arduino
+Copy code
+airline-reservation-system/
+├── backend/  # Spring Boot back-end
+│   ├── src/
+│   │   ├── main/
+│   │   │   └── java/
+│   │   │       └── com/
+│   │   │           └── example/
+│   │   │               └── airline/
+│   │   │                   ├── AirlineReservationSystemApplication.java
+│   │   │                   ├── controller/
+│   │   │                   ├── model/
+│   │   │                   ├── repository/
+│   │   │                   └── service/
+│   │   └── resources/
+│   └── pom.xml
+├── frontend/  # Vue.js front-end
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── router/
+│   │   ├── views/
+│   │   └── App.vue
+│   ├── package.json
+│   └── vue.config.js
+└── README.md
