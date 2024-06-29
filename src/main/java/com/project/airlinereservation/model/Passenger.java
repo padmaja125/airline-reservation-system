@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 //name, contact information, and booking history
 @Entity
@@ -21,6 +23,18 @@ public class Passenger {
 
 	@OneToMany(mappedBy="passenger")
 	private List<Reservation> reservation;
+
+    public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	@ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 	
 
 	public Long getId() {
@@ -71,13 +85,15 @@ public class Passenger {
 		this.reservation = reservation;
 	}
 
-	public Passenger(String first_name, String last_name, String email, String phone, List<Reservation> reservation) {
+	public Passenger(String first_name, String last_name, String email, String phone, List<Reservation> reservation,
+			User user) {
 		super();
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email = email;
 		this.phone = phone;
 		this.reservation = reservation;
+		this.user = user;
 	}
 
 	public Passenger() {

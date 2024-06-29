@@ -8,54 +8,42 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Reservation {
+public class Pricing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "passenger_id")
-    private Passenger passenger;
-
-    @ManyToOne
     @JoinColumn(name = "flight_id")
     private Flight flight;
-    
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-    
 
+    private double price;
+    private String dynamicPricingData;
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public Passenger getPassenger() {
-		return passenger;
-	}
-
-	public void setPassenger(Passenger passenger) {
-		this.passenger = passenger;
-	}
-
 	public Flight getFlight() {
 		return flight;
 	}
-
 	public void setFlight(Flight flight) {
 		this.flight = flight;
 	}
-
-	public User getUser() {
-		return user;
+	public double getPrice() {
+		return price;
 	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}    
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String getDynamicPricingData() {
+		return dynamicPricingData;
+	}
+	public void setDynamicPricingData(String dynamicPricingData) {
+		this.dynamicPricingData = dynamicPricingData;
+	}
+    
+    
 
 }

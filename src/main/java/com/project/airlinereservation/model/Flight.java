@@ -23,8 +23,15 @@ public class Flight {
 	private LocalDateTime schedule;
 	@OneToMany(mappedBy="flight")
 	private List<Reservation> reservation;
+    @OneToMany(mappedBy = "flight")
+    private List<Pricing> pricings;
 	
-	
+	public List<Pricing> getPricings() {
+		return pricings;
+	}
+	public void setPricings(List<Pricing> pricings) {
+		this.pricings = pricings;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -65,21 +72,5 @@ public class Flight {
 	public String toString() {
 		return "Flight [flightNumber=" + flightNumber + ", departure=" + departure + ", destination=" + destination
 				+ ", schedule=" + schedule + "]";
-	}
-	public Flight(String flightNumber, String departure, String destination, LocalDateTime schedule,
-			List<Reservation> reservation) {
-		super();
-		this.flightNumber = flightNumber;
-		this.departure = departure;
-		this.destination = destination;
-		this.schedule = schedule;
-		this.reservation = reservation;
-	}
-	public Flight() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	
+	}	
 }
