@@ -14,6 +14,14 @@ The Airline Reservation System is a full-stack application designed to manage fl
 
 - **Reservation System**: Allow passengers to book flights, select seats, and manage their reservations.
 
+- **Feedback**: Collect and manage feedback from passengers regarding their experience.
+
+- **Analytics**: Implement data analytics to analyze flight booking trends, passenger preferences, etc.
+
+- **Pricing**: Implement dynamic pricing strategies based on analytics and market trends.
+
+- **User Management**: Manage user accounts, authentication, and authorization for accessing the system.
+
 ## Technologies Used
 
 - **Back-End**: Java, Spring Boot, Spring MVC, Spring Data JPA
